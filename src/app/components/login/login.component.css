@@ -1,0 +1,19 @@
+.form-label {
+    margin-bottom: -0.5rem;
+}
+
+
+/* Add this CSS to your stylesheet or in a style tag in the head of your HTML document */
+
+/* Style for placeholders */
+.form-control::placeholder {
+    color: #6c757d; /* Placeholder text color */
+    font-style: italic; /* Italicize the placeholder text */
+    font-size: 0.50rem;
+}
+
+/* Style for focused placeholders */
+.form-control:focus::placeholder {
+    color: #007bff; /* Placeholder text color when input is focused */
+    font-style: normal; /* Set to normal when input is focused */
+}

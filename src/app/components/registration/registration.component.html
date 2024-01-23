@@ -1,0 +1,282 @@
+<!-- <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <title>Registration Form</title>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <form class="form-horizontal" role="form" [formGroup]="RegisterForm" (ngSubmit)="onSubmit()">
+            <h2 class="text-center"
+                style="font-size: 70px; color: #3db3e6; font-family: 'Arial', sans-serif; font-weight: bold; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
+                Register</h2>
+            <h2 class="text-center"
+                style="font-size: 50px; color: #65aacf; font-family: 'Arial', sans-serif; font-weight: bold; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
+                Here!!</h2>
+
+            <div class="form-group">
+                <label for="name" class="col-sm-3 control-label">Name</label>
+                <div class="col-sm-9">
+                    <input type="text" id="name" placeholder="Name" class="form-control" formControlName="name"
+                        autofocus>
+                    <div
+                        *ngIf="RegisterForm.get('name').invalid && (RegisterForm.get('name').dirty || RegisterForm.get('name').touched)">
+                        <div *ngIf="RegisterForm.get('name').hasError('required') " class="text-danger">Name is
+                            required.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email" class="col-sm-3 control-label">Email ID*</label>
+                <div class="col-sm-9">
+                    <input type="email" id="email" placeholder="Email ID" class="form-control"
+                        formControlName="emailId">
+                    <div
+                        *ngIf="RegisterForm.get('email').invalid && (RegisterForm.get('email').dirty || RegisterForm.get('email').touched)">
+                        <div *ngIf="RegisterForm.get('email').hasError('required')">Email is required.</div>
+                        <div *ngIf="RegisterForm.get('email').hasError('email')" class="text-danger">Please enter a
+                            valid email address.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" >
+                <label for="password" class="col-sm-3 control-label">password</label>
+                <div class="col-sm-9">
+                    <input type="password" id="password" class="form-control" formControlName="password">
+                </div>
+            </div>
+
+            <div class="form-group" >
+                <label for="dob" class="col-sm-3 control-label">Date of Birth*</label>
+                <div class="col-sm-9">
+                    <input type="date" id="dob" class="form-control" formControlName="dateOfBirth">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="mobile" class="col-sm-3 control-label">Mobile Number </label>
+                <div class="col-sm-9">
+                    <input type="tel" id="mobileno" placeholder="Mobile Number" class="form-control"
+                        formControlName="mobileNumber">
+                    <small class="form-text text-muted">Your mobile number won't be disclosed anywhere</small>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="adhar" class="col-sm-3 control-label">Adhar Card</label>
+                <div class="col-sm-9">
+                    <input type="text" id="adharcard" placeholder="Adhar Card" class="form-control"
+                        formControlName="adharCard">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="address" class="col-sm-3 control-label">Address</label>
+                <div class="col-sm-9">
+                    <textarea id="address" placeholder="Address" class="form-control"
+                        formControlName="address"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="country" class="col-sm-3 control-label">Country</label>
+                <div class="col-sm-9">
+                   
+                    <select id="country" class="form-control" formControlName="country">
+                        <option value="usa">USA</option>
+                        <option value="canada">Canada</option>
+                 
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="gender" class="col-sm-3 control-label" formControlName="gender">Gender</label>
+                <div class="col-sm-9">
+                 
+                    <select id="gender" class="form-control">
+                        <option value="female">Female</option>
+                        <option value="male">Male</option>
+                   
+                    </select>
+                </div>
+            </div>
+            <div class="form-group" formControlName="resumeContent">
+                <label for="resume" class="col-sm-3 control-label">Add Resume File</label>
+                <div class="col-sm-9">
+                    <input type="file" id="resume" class="form-control-file">
+                    <small class="form-text text-muted">Choose a file to upload</small>
+                </div>
+            </div>
+
+            <button type="submit" [disabled]="!RegisterForm.valid">Submit</button>
+        </form>
+    </div>
+
+</body> -->
+
+<!-- registration.component.html -->
+
+<!-- <form [formGroup]="RegisterForm" (ngSubmit)="onSubmit()">
+    <label for="name">Name:</label>
+    <input type="text" id="name" formControlName="name">
+  
+    <label for="email">Email:</label>
+    <input type="email" id="email" formControlName="emailId">
+  
+    <label for="password">Password:</label>
+    <input type="password" id="password" formControlName="password">
+  
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" formControlName="dateOfBirth">
+  
+    <label for="mobileno">Mobile Number:</label>
+    <input type="tel" id="mobileno" formControlName="mobileNumber">
+  
+    <label for="adharcard">Adhar Card:</label>
+    <input type="text" id="adharcard" formControlName="adharCard">
+  
+    <label for="address">Address:</label>
+    <textarea id="address" formControlName="address"></textarea>
+  
+    <label for="country">Country:</label>
+    <input type="text" id="country" formControlName="country">
+  
+    <label for="gender">Gender:</label>
+    <select id="gender" formControlName="gender">
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select>
+  
+    <label for="resume">Resume Content:</label>
+    <textarea id="resume" formControlName="resumeContent"></textarea>
+  
+    <button type="submit" [disabled]="!RegisterForm.valid" (click)="onSubmit()">Submit</button>
+  </form>
+   -->
+
+
+
+
+
+   <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <title>Registration Form</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <form class="form-horizontal" role="form" [formGroup]="RegisterForm" (ngSubmit)="onSubmit()">
+      <h2 class="text-center"
+        style="font-size: 70px; color: #3db3e6; font-family: 'Arial', sans-serif; font-weight: bold; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
+        Register</h2>
+      <h2 class="text-center"
+        style="font-size: 50px; color: #65aacf; font-family: 'Arial', sans-serif; font-weight: bold; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
+        Here!!</h2>
+
+      <div class="form-group">
+        <label for="name" class="col-sm-3 control-label">Name</label>
+        <div class="col-sm-9">
+          <input type="text" id="name" placeholder="Name" class="form-control" formControlName="name" autofocus>
+          <div *ngIf="RegisterForm.get('name').invalid && (RegisterForm.get('name').dirty || RegisterForm.get('name').touched)">
+            <div *ngIf="RegisterForm.get('name').hasError('required')" class="text-danger">Name is required.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email" class="col-sm-3 control-label">Email ID*</label>
+        <div class="col-sm-9">
+          <input type="email" id="email" placeholder="Email ID" class="form-control" formControlName="emailId">
+          <div
+            *ngIf="RegisterForm.get('emailId').invalid && (RegisterForm.get('emailId').dirty || RegisterForm.get('emailId').touched)">
+            <div *ngIf="RegisterForm.get('emailId').hasError('required')">Email is required.</div>
+            <div *ngIf="RegisterForm.get('emailId').hasError('email')" class="text-danger">Please enter a valid email
+              address.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="password" class="col-sm-3 control-label">Password</label>
+        <div class="col-sm-9">
+          <input type="password" id="password" placeholder="Password" class="form-control" formControlName="password">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="dob" class="col-sm-3 control-label">Date of Birth</label>
+        <div class="col-sm-9">
+          <input type="date" id="dob" class="form-control" formControlName="dateOfBirth">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="mobileno" class="col-sm-3 control-label">Mobile Number</label>
+        <div class="col-sm-9">
+          <input type="tel" id="mobileno" placeholder="Mobile Number" class="form-control" formControlName="mobileNumber">
+          <small class="form-text text-muted">Your mobile number won't be disclosed anywhere</small>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="adharcard" class="col-sm-3 control-label">Adhar Card</label>
+        <div class="col-sm-9">
+          <input type="text" id="adharcard" placeholder="Adhar Card" class="form-control" formControlName="adharCard">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="address" class="col-sm-3 control-label">Address</label>
+        <div class="col-sm-9">
+          <textarea id="address" placeholder="Address" class="form-control" formControlName="address"></textarea>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="country" class="col-sm-3 control-label">Country</label>
+        <div class="col-sm-9">
+          <select id="country" class="form-control" formControlName="country">
+            <option value="usa">USA</option>
+            <option value="canada">Canada</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="gender" class="col-sm-3 control-label">Gender</label>
+        <div class="col-sm-9">
+          <select id="gender" class="form-control" formControlName="gender">
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="resume" class="col-sm-3 control-label">Add Resume File</label>
+        <div class="col-sm-9">
+          <input type="file" id="resume" class="form-control-file" formControlName="resumeContent">
+          <small class="form-text text-muted">Choose a file to upload</small>
+        </div>
+      </div>
+
+      <button type="submit" [disabled]="!RegisterForm.valid">Submit</button>
+    </form>
+  </div>
+
+</body>
+
+</html>
